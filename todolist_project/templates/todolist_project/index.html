@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-6">
+        <div class="text-center">
+          <h2 class="mb-4">Hello, {{ user.get_username }}!</h2>
+          <p class="mb-3">We're glad to have you here. Here's a quick overview of your tasks:</p>
+          <ul class="list-unstyled">
+            <li class="mb-2">Total number of tasks: {{ all_tasks_count }}</li>
+            <li class="mb-2">Tasks you've completed: {{ completed_tasks_count }}</li>
+            <li class="mb-4">Pending tasks: {{ incompleted_tasks_count }}</li>
+          </ul>
+          <p class="mb-4">
+            Stay organized by managing your tasks easily through our app. You can view, update, and manage your to-do list
+            to ensure everything is on track. Keep pushing forward and finish those pending tasks!
+          </p>
+          <p>
+            Feel free to share your thoughts with us, and let us know if there's anything we can do to improve your experience.
+            We hope this app makes your day more productive!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
